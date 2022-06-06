@@ -1,14 +1,16 @@
-import React, { useState, useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import React, { useState } from "react";
 
-const Login = () => {
+export const Login = ({handleProduct}) => {
+  const [query1,setQuery1]=useState("");
+  const [query2,setQuery2]=useState("");
   return (
-    <div>
-      <input data-cy="login-email" />
-      <input data-cy="login-password" />
-      <button data-cy="login-submit"></button>
+    <div >
+    <input value={query1} data-cy="login-email"  onChange={(e)=> setQuery1(e.target.value)} />
+      <div>
+      <input value={query2} onChange={(target)=>setQuery2(target.value)} data-cy="login-password" />
+      </div>
+      <div><button data-cy="login-submit" onClick={handleProduct}>Login</button></div>
     </div>
   );
 };
 
-export default Login;

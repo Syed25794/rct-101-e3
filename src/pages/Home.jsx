@@ -1,7 +1,16 @@
 import React from "react";
+import Products from "../components/Products/Products";
+import {Login} from './Login';
 
-const Home = () => {
-  return <div>{/* Code here */}</div>;
+export const Home = () => {
+  const [show,setShow]=React.useState(true);
+  const handleShow=()=>{
+    setShow(!show);
+  }
+  return (
+  <div>
+  {show ? <Login handleProduct={handleShow} /> :  <Products handleShow={handleShow}/>}
+  </div>
+  )
 };
 
-export default Home;

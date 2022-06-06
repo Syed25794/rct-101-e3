@@ -46,11 +46,5 @@
       "description": "A Product that is 9th in the list of  products"
     }
   ],
-  "cartItems": [
-    {
-      "productId": 2,
-      "count": 1,
-      "id": 1
-    }
-  ]
+  "cartItems": []
 }
